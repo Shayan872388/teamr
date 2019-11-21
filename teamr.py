@@ -1,5 +1,5 @@
 from turtle import *
-r = Turtle()
+R = Turtle()
 colormode(255)
 
 def createRipple():
