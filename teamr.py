@@ -26,6 +26,7 @@ def createWaves():
     R.end_fill()
 
 def drawLand():
+    #By Rishil Patel
     R.penup()
     R.pencolor("light green") #color of the land
     R.begin_fill()
