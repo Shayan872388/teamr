@@ -47,7 +47,7 @@ def drawLand():
     r.forward(((360/math.pi)*4)+60) #goes to the wave's edge
     r.end_fill() #fills half the page with the land
 def drawOneSeaweed():
-
+    #By rishil patel
     r.pencolor("black")
     r.fillcolor("light green")
     r.begin_fill()
@@ -73,6 +73,7 @@ def drawOneSeaweed():
     r.end_fill()
 
 def drawAllSeaweed(): #repeats drawoneseaweed function
+    #By rishil patel
     for i in range(1):
         r.penup()
         r.goto(100,0)
@@ -83,3 +84,4 @@ drawLand()
 drawAllSeaweed()
 
 update()
+
