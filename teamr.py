@@ -13,11 +13,12 @@ def createRipple():
         r.right(1)
 def createWaves():
     #By rishil Patel
+
+    r.penup()
+    r.goto(475,200) #top right corner
     r.pencolor("blue")
     r.fillcolor("blue")
     r.begin_fill()
-    r.penup()
-    r.goto(475,200) #top right corner
     r.pendown()
     for i in range(4): #create 4 ripples
         createRipple()
@@ -31,10 +32,10 @@ def createWaves():
 def drawLand():
     #By rishil Patel
     r.penup()
+    r.goto(-500,200) 
     r.pencolor("light green") #color of the land
     r.begin_fill()
     r.fillcolor("light green")
-    r.goto(-500,200) 
     r.pendown()
     r.right(90)
     r.forward(800) 
@@ -45,4 +46,40 @@ def drawLand():
     r.left(90)
     r.forward(((360/math.pi)*4)+60) #goes to the wave's edge
     r.end_fill() #fills half the page with the land
+def drawOneSeaweed():
+
+    r.pencolor("black")
+    r.fillcolor("light green")
+    r.begin_fill()
+
+
+    diameter = 20 #make a semicircle
+    for i in range(10):
+        r.circle((diameter/2), 180,)
+        r.left(90)
+        r.forward(diameter)
+        r.forward(-diameter)
+        r.right(90)
+
+        r.circle((-diameter/2), 180) #make another semicircle but in the opposite direction so that it does not form a complete circle
+        r.right(90)
+        r.forward(diameter)
+        r.forward(-diameter)
+        r.left(90)
+        position = r.ycor()
+    if position > 170: #stop seaweed if it goes above the waves
+        r.penup()
+        r.end_fill()
+    r.end_fill()
+
+def drawAllSeaweed(): #repeats drawoneseaweed function
+    for i in range(1):
+        r.penup()
+        r.goto(100,0)
+        drawOneSeaweed()
+
+createWaves()
+drawLand()
+drawAllSeaweed()
+
 update()
