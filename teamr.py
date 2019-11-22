@@ -7,15 +7,15 @@ tracer(0)
 
 def randomRed():
     #By rishil patel
-    red = (randint(1,255),0,0)
+    red = (randint(100,255),0,0)
     return red
 def randomBlue():
     #By rishil patel
-    blue = (0,0,randint(1,255))
+    blue = (0,0,randint(100,255))
     return blue
 def randomGreen():
     #By rishil patel
-    green = (0,randint(1,255),0)
+    green = (0,randint(100,255),0)
     return green
 def randomYellow():
     #By rishil patel
@@ -74,7 +74,7 @@ def drawLand():
 def drawOneSeaweed():
     #By rishil patel
     r.pencolor("black")
-    r.fillcolor("light green")
+    r.fillcolor(randomGreen())
     r.begin_fill()
 
 
@@ -109,4 +109,3 @@ drawLand()
 drawAllSeaweed()
 
 update()
-
