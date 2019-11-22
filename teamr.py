@@ -5,6 +5,31 @@ r= Turtle()
 colormode(255)
 tracer(0)
 
+def randomRed():
+    #By rishil patel
+    red = (randint(1,255),0,0)
+    return red
+def randomBlue():
+    #By rishil patel
+    blue = (0,0,randint(1,255))
+    return blue
+def randomGreen():
+    #By rishil patel
+    green = (0,randint(1,255),0)
+    return green
+def randomYellow():
+    #By rishil patel
+    yellow = (randint(150,255),randint(150,255),0)
+    return yellow
+def randomOrange():
+    #By rishil patel
+    orange = (255,randint(100,200),0)
+    return orange
+def randomPurple():
+    #By rishil patel
+    purple = (randint(100,255),0,randint(100,255))
+    return purple
+
 def createRipple():
     #By rishil Patel
     r.setheading(270) #face south
