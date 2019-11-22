@@ -104,8 +104,96 @@ def drawAllSeaweed(): #repeats drawoneseaweed function
         r.goto(100,0)
         drawOneSeaweed()
 
+def drawBird():
+  #by Shayan Manoharan
+  r.penup()
+  r.fillcolor(0,0,0)
+  r.goto(0,300)
+  r.begin_fill()
+  r.pencolor("black")
+  r.pendown()
+  r.setheading(0)
+  for i in range(30):
+    r.forward(1)
+    r.right(2)
+  r.setheading(45)
+  for i in range(30):
+    r.forward(1)
+    r.right(2)
+  r.left(170)
+  for i in range(30):
+    r.forward(1)
+    r.left(2)
+  r.setheading(135)
+  for i in range(30):
+    r.forward(1)
+    r.left(2)
+  r.penup()
+  r.end_fill()
+    
+def drawStickPerson():
+  #by sangeev p
+  r.penup()
+  r.setheading(0)
+  r.goto(-50,230)
+  r.pencolor("black")
+  r.fillcolor(0,0,0)
+  r.begin_fill()
+  r.pendown()
+  r.circle(10)
+  r.end_fill()
+  r.right(90)
+  r.forward(5)
+  r.right(90)
+  r.forward(10)
+  r.right(180)
+  r.forward(25)
+  r.right(180)
+  r.forward(15)
+  r.left(90)
+  r.forward(20)
+  r.right(60)
+  r.forward(15)
+  r.right(180)
+  r.forward(15)
+  r.right(60)
+  r.forward(15)
+  
+def drawBoat():
+  #by Shayan Manoharan
+  r.penup()
+  r.goto(250,190)
+  r.setheading(0)
+  r.fillcolor("black")
+  r.begin_fill()
+  r.pendown()
+  r.forward(100)
+  r.right(90)
+  for i in range(180):
+    r.forward(.85)
+    r.right(1)
+  r.end_fill()  
+  r.right(90)
+  r.forward(45)
+  r.left(90)
+  r.forward(70)
+  r.right(90)
+  r.begin_fill()
+  r.fillcolor("blue")
+  for i in range(120):
+    r.right(1)
+    r.forward(.6)
+  r.right(65)
+  r.forward(30)
+  r.end_fill()
+
 createWaves()
 drawLand()
 drawAllSeaweed()
+drawBird()
+drawStickPerson()
+drawBoat()
+
+
 
 update()
